@@ -1,0 +1,21 @@
+[package]
+name = "cipher"
+version = "0.0.1"
+description = "Created with Anchor"
+authors = ["zkNico"]
+edition = "2018"
+license = "Apache-2.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "minerva"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+uuid = { version = "0.8.*", features = ["serde", "v5"] }
+anchor-lang = "0.22.1"
